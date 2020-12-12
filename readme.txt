@@ -49,7 +49,7 @@ Presentation video: https://www.youtube.com/watch?v=tEhzN8cw2OM
 
 2.1 Requirements
 ----------------
-- OpenTTD <1.10.3> or higher
+- OpenTTD <1.10.2> or higher
 
 
 2.2 Installation
@@ -62,12 +62,12 @@ OpenTTD:
 3 Known issues
 --------------
 Not real issues, but it's important to know this:
-- Due to game limitations, all the recent 9 buses are unable to overtake others:
+- Due to game limitations, the lastest 9 buses are unable to overtake others:
 - Only the first 2 buses can pass over other vehicles (of the same size or shorter in lenght).
-- In the same way that only the first 2 buses are the ones that can get in and out of the bus terminals, making inversion sharp curves in one square of terrain map.
-- Last 9 vehicle, can only perform service at street/road stops. (Drive-Trough)
+- In the same way that only the first 2 buses are the ones that can get in and out of bus terminals, making inversion sharp curves in one square of terrain map.
+- The last 9 vehicles, can only perform service at street/road stops. (Drive-Trough)
 
-- No costum company colors yet... maybe for a future upgrade...
+- No costum company colors yet... maybe for a future version...
 - The default (Vanilla) Bus vehicles are disabled with this pack active. (Not a replacement, but it works as if it was...).
 
 For future issues, please report on my github repository.
@@ -116,7 +116,7 @@ Translations:
 7.1 General enquiries
 ---------------------
 
-If you have any queries contact me via github or youtube profile/comment section.
+If you have any queries contact me via github or youtube profile/comments section.
 
 
 
