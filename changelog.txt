@@ -1,0 +1,4 @@
+
+Version 1.0.0.0:
+	12-12-2020
+	- First release to the OpenTTD online content service BaNaNaS
