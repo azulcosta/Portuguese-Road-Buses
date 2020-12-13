@@ -1,0 +1,1251 @@
+﻿//define the grf
+grf {
+    grfid: "aC11";
+    //grfid: "GF\01\03";
+    name: string(STR_GRF_NAME);
+    desc: string(STR_GRF_DESC);
+    version: 08;
+    min_compatible_version: 08;
+}
+
+//Inserir codigo para desativar autocarros padrão do jogo:
+//disable_item(FEAT_TRAINS, 1, 115);
+
+disable_item(FEAT_ROADVEHS, 0, 6);
+
+//TALVEZ NAO SEJA PRECISO DUMMYS
+
+//----------------------- Dummy Tamanho 8 bits (transparent) ----------------------
+//----------------------- Textura invisivel para ser usada nos Dummys abaixo ------
+
+spriteset(spriteset_flatbed_invisible, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+
+//----------------------- SPECS do dummy 8 (dummy transparente a usar em veiculos)----------
+
+item(FEAT_ROADVEHS, dummy8) {
+    property {
+        climates_available:             NO_CLIMATE;
+        model_life:                     VEHICLE_NEVER_EXPIRES;
+        non_refittable_cargo_classes:   bitmask(); 
+        sprite_id:                      SPRITE_ID_NEW_ROADVEH;
+        power:                          0;
+        cargo_capacity:                 0;
+        weight:                         0;
+        length:                         8;	//Sempre comprimento maximo, se ficar no meio
+        visual_effect:		visual_effect (VISUAL_EFFECT_DISABLE, 0);
+			//VISUAL_EFFECT_ELECTRIC) VS VISUAL_EFFECT_DISABLE //
+    }
+    graphics {
+        default:                    spriteset_flatbed_invisible;
+    }
+}
+
+
+
+
+
+
+cargotable {
+    PASS,
+}
+
+
+
+
+
+
+
+//----------------------- Fiat 2B BUS --------------------------------------------
+//----------------------- Fiat 2B BUS BUY DEPOSITO--------------------------------
+spriteset(spriteset_Fiat2B_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_Fiat2B_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-8,  -4, "gfx/Fiat2B/Fiat2B_buy.png"]
+}
+
+//----------------------- Fiat 2B BUS 8 bits (transparent)-------------------------
+spriteset(spriteset_Fiat2B, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_Fiat2B, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-12,	-24,	"gfx/Fiat2B/Fiat2B1_z0.png"]	//23x36
+	[-25,	-7,  	"gfx/Fiat2B/Fiat2B2_z0.png"]	//55x37
+	[-19,	-10,  	"gfx/Fiat2B/Fiat2B3_z0.png"]	//59x30
+	[-8,	-10,  	"gfx/Fiat2B/Fiat2B4_z0.png"]	//54x46
+	[-12,	-19,  	"gfx/Fiat2B/Fiat2B5_z0.png"]	//23x46
+	[-50,	-12,  	"gfx/Fiat2B/Fiat2B6_z0.png"]	//54x46
+	[-38,	-15,  	"gfx/Fiat2B/Fiat2B7_z0.png"]	//58x30
+	[-18,	-13, 	"gfx/Fiat2B/Fiat2B8_z0.png"]	//52x37
+}
+spritegroup spritegroup_Fiat2B {
+    loading: spriteset_Fiat2B;
+    loaded: spriteset_Fiat2B;
+}
+
+
+
+
+
+
+
+
+
+
+
+//----------------------- Chevrolet --------------------------------------------
+//----------------------- Chevrolet BUY DEPOSITO--------------------------------
+spriteset(spriteset_Chevy_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_Chevy_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-10,  -4, "gfx/Chevy/Chevy_buy.png"]
+}
+
+//----------------------- Chevy 8 bits (transparent)-------------------------
+spriteset(spriteset_Chevy, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_Chevy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-13,	-25,	"gfx/Chevy/Chevy1_z0.png"]	//26x51
+	[-48,	-7,  	"gfx/Chevy/Chevy2_z0.png"]	//77x49
+	[-42,	-19,  	"gfx/Chevy/Chevy3_z0.png"]	//85x38
+	[-28,	-17,  	"gfx/Chevy/Chevy4_z0.png"]	//77x59
+	[-13,	-31,  	"gfx/Chevy/Chevy5_z0.png"]	//25x62
+	[-53,	-21,  	"gfx/Chevy/Chevy6_z0.png"]	//76x59
+	[-42,	-19,  	"gfx/Chevy/Chevy7_z0.png"]	//85x38
+	[-23,	-17, 	"gfx/Chevy/Chevy8_z0.png"]	//77x49
+}
+spritegroup spritegroup_Chevy {
+    loading: spriteset_Chevy;
+    loaded: spriteset_Chevy;
+}
+
+
+
+
+
+
+
+
+//----------------------- Regent --------------------------------------------
+//----------------------- Regent III BUY DEPOSITO--------------------------------
+spriteset(spriteset_Regent_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_Regent_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-14,  -7, "gfx/Regent/Regent_buy.png"]
+}
+
+//----------------------- Regent 8 bits (transparent)-------------------------
+spriteset(spriteset_Regent, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_Regent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-17,	-45,	"gfx/Regent/Regent1_z0.png"]	//35x91
+	[-74,	-33,  	"gfx/Regent/Regent2_z0.png"]	//99x86
+	[-63,	-30,  	"gfx/Regent/Regent3_z0.png"]	//111x61
+	[-49,	-50,  	"gfx/Regent/Regent4_z0.png"]	//99x89
+	[-17,	-51,  	"gfx/Regent/Regent5_z0.png"]	//34x93
+	[-54,	-55,  	"gfx/Regent/Regent6_z0.png"]	//99x89
+	[-55,	-30,  	"gfx/Regent/Regent7_z0.png"]	//110x61
+	[-24,	-46, 	"gfx/Regent/Regent8_z0.png"]	//99x87
+}
+spritegroup spritegroup_Regent {
+    loading: spriteset_Regent;
+    loaded: spriteset_Regent;
+}
+
+//----------------------- Regent  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_Regent_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+
+//----------------------- Seddon --------------------------------------------
+//----------------------- Seddon BUY DEPOSITO--------------------------------
+spriteset(spriteset_Seddon_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_Seddon_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-13,  -4, "gfx/Seddon/Seddon_buy.png"]
+}
+
+//----------------------- Seddon 8 bits (transparent)-------------------------
+spriteset(spriteset_Seddon, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_Seddon, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-15,	-44,	"gfx/Seddon/Seddon1_z0.png"]	//31x79
+	[-68,	-21,  	"gfx/Seddon/Seddon2_z0.png"]	//96x72
+	[-47,	-21,  	"gfx/Seddon/Seddon3_z0.png"]	//105x43
+	[-48,	-31,  	"gfx/Seddon/Seddon4_z0.png"]	//96x73
+	[-17,	-33,  	"gfx/Seddon/Seddon5_z0.png"]	//31x77
+	[-53,	-36,  	"gfx/Seddon/Seddon6_z0.png"]	//96x73
+	[-57,	-21,  	"gfx/Seddon/Seddon7_z0.png"]	//105x43
+	[-23,	-31, 	"gfx/Seddon/Seddon8_z0.png"]	//96x72
+}
+spritegroup spritegroup_Seddon {
+    loading: spriteset_Seddon;
+    loaded: spriteset_Seddon;
+}
+
+
+//----------------------- Seddon  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_Seddon_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+//----------------------- Guy --------------------------------------------
+//----------------------- Guy BUY DEPOSITO--------------------------------
+spriteset(spriteset_Guy_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_Guy_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-19,  -5, "gfx/Guy/Guy_buy.png"]
+}
+
+//----------------------- Guy 8 bits (transparent)-------------------------
+spriteset(spriteset_Guy, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_Guy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-16,	-47,	"gfx/Guy/Guy1_z0.png"]	//31x94
+	[-90,	-20,  	"gfx/Guy/Guy2_z0.png"]	//119x82
+	[-70,	-23,  	"gfx/Guy/Guy3_z0.png"]	//140x46
+	[-70,	-41,  	"gfx/Guy/Guy4_z0.png"]	//119x83
+	[-16,	-46,  	"gfx/Guy/Guy5_z0.png"]	//31x93
+	[-55,	-48,  	"gfx/Guy/Guy6_z0.png"]	//119x83
+	[-70,	-23,  	"gfx/Guy/Guy7_z0.png"]	//139x46
+	[-25,	-30, 	"gfx/Guy/Guy8_z0.png"]	//119x82
+}
+spritegroup spritegroup_Guy {
+    loading: spriteset_Guy;
+    loaded: spriteset_Guy;
+}
+
+
+//----------------------- Guy  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_Guy_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+//----------------------- U2077 --------------------------------------------
+//----------------------- U2077 BUY DEPOSITO--------------------------------
+spriteset(spriteset_U2077_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_U2077_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-20,  -4, "gfx/U2077/U2077_buy.png"]
+}
+
+//----------------------- U2077 8 bits (transparent)-------------------------
+spriteset(spriteset_U2077, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_U2077, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-15,	-43,	"gfx/U2077/U20771_z0.png"]	//29x106
+	[-103,	-24,  	"gfx/U2077/U20772_z0.png"]	//133x93
+	[-105,	-24,  	"gfx/U2077/U20773_z0.png"]	//159x48
+	[-84,	-52,  	"gfx/U2077/U20774_z0.png"]	//133x95
+	[-15,	-74,  	"gfx/U2077/U20775_z0.png"]	//29x108
+	[-56,	-61,  	"gfx/U2077/U20776_z0.png"]	//133x95
+	[-60,	-24,  	"gfx/U2077/U20777_z0.png"]	//159x48
+	[-21,	-31, 	"gfx/U2077/U20778_z0.png"]	//133x93
+}
+spritegroup spritegroup_U2077 {
+    loading: spriteset_U2077;
+    loaded: spriteset_U2077;
+}
+
+
+//----------------------- U2077  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_U2077_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+
+
+//----------------------- U2075 --------------------------------------------
+//----------------------- U2075 BUY DEPOSITO--------------------------------
+spriteset(spriteset_U2075_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_U2075_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-20,  -4, "gfx/U2075/U2075_buy.png"]
+}
+
+//----------------------- U2075 8 bits (transparent)-------------------------
+spriteset(spriteset_U2075, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_U2075, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-15,	-43,	"gfx/U2075/U20751_z0.png"]	//29x107
+	[-103,	-24,  	"gfx/U2075/U20752_z0.png"]	//133x95
+	[-105,	-24,  	"gfx/U2075/U20753_z0.png"]	//159x48
+	[-84,	-52,  	"gfx/U2075/U20754_z0.png"]	//133x96
+	[-15,	-74,  	"gfx/U2075/U20755_z0.png"]	//29x108
+	[-56,	-61,  	"gfx/U2075/U20756_z0.png"]	//133x96
+	[-60,	-24,  	"gfx/U2075/U20757_z0.png"]	//159x48
+	[-21,	-31, 	"gfx/U2075/U20758_z0.png"]	//133x95
+}
+spritegroup spritegroup_U2075 {
+    loading: spriteset_U2075;
+    loaded: spriteset_U2075;
+}
+
+
+//----------------------- U2075  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_U2075_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+//----------------------- Volvo --------------------------------------------
+//----------------------- Volvo BUY DEPOSITO--------------------------------
+spriteset(spriteset_Volvo_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_Volvo_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-19,  -4, "gfx/Volvo/Volvo_buy.png"]
+}
+
+//----------------------- Volvo 8 bits (transparent)-------------------------
+spriteset(spriteset_Volvo, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_Volvo, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-16,	-43,	"gfx/Volvo/Volvo1_z0.png"]	//33x102
+	[-103,	-24,  	"gfx/Volvo/Volvo2_z0.png"]	//133x91
+	[-105,	-24,  	"gfx/Volvo/Volvo3_z0.png"]	//155x48
+	[-84,	-52,  	"gfx/Volvo/Volvo4_z0.png"]	//133x93
+	[-16,	-74,  	"gfx/Volvo/Volvo5_z0.png"]	//33x104
+	[-56,	-61,  	"gfx/Volvo/Volvo6_z0.png"]	//133x93
+	[-60,	-24,  	"gfx/Volvo/Volvo7_z0.png"]	//154x49
+	[-21,	-31, 	"gfx/Volvo/Volvo8_z0.png"]	//133x91
+}
+spritegroup spritegroup_Volvo {
+    loading: spriteset_Volvo;
+    loaded: spriteset_Volvo;
+}
+
+
+//----------------------- Volvo  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_Volvo_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+
+
+//----------------------- MO405 --------------------------------------------
+//----------------------- MO405 BUY DEPOSITO--------------------------------
+spriteset(spriteset_MO405_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_MO405_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-18,  -5, "gfx/MO405/MO405_buy.png"]
+}
+
+//----------------------- MO405 8 bits (transparent)-------------------------
+spriteset(spriteset_MO405, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_MO405, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-16,	-52,	"gfx/MO405/MO4051_z0.png"]	//33x104
+	[-103,	-24,  	"gfx/MO405/MO4052_z0.png"]	//131x94
+	[-76,	-25,  	"gfx/MO405/MO4053_z0.png"]	//152x51
+	[-84,	-52,  	"gfx/MO405/MO4054_z0.png"]	//131x94
+	[-16,	-52,  	"gfx/MO405/MO4055_z0.png"]	//33x104
+	[-56,	-61,  	"gfx/MO405/MO4056_z0.png"]	//131x94
+	[-76,	-25,  	"gfx/MO405/MO4057_z0.png"]	//152x51
+	[-21,	-31, 	"gfx/MO405/MO4058_z0.png"]	//131x94
+}
+spritegroup spritegroup_MO405 {
+    loading: spriteset_MO405;
+    loaded: spriteset_MO405;
+}
+
+
+//----------------------- MO405  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_MO405_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+
+//----------------------- MO404 --------------------------------------------
+//----------------------- MO404 BUY DEPOSITO--------------------------------
+spriteset(spriteset_MO404_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_MO404_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-20,  -6, "gfx/MO404/MO404_buy.png"]
+}
+
+//----------------------- MO404 8 bits (transparent)-------------------------
+spriteset(spriteset_MO404, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_MO404, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-18,	-56,	"gfx/MO404/MO4041_z0.png"]	//37x113
+	[-113,	-30,  	"gfx/MO404/MO4042_z0.png"]	//140x100
+	[-82,	-30,  	"gfx/MO404/MO4043_z0.png"]	//165x60
+	[-90,	-66,  	"gfx/MO404/MO4044_z0.png"]	//139x107
+	[-19,	-60,  	"gfx/MO404/MO4045_z0.png"]	//38x120
+	[-56,	-73,  	"gfx/MO404/MO4046_z0.png"]	//140x107
+	[-82,	-30,  	"gfx/MO404/MO4047_z0.png"]	//165x59
+	[-23,	-37, 	"gfx/MO404/MO4048_z0.png"]	//139x100
+}
+spritegroup spritegroup_MO404 {
+    loading: spriteset_MO404;
+    loaded: spriteset_MO404;
+}
+
+
+//----------------------- MO404  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_MO404_articulated, extra_callback_info1) {
+	1: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+
+
+//----------------------- MANCITY --------------------------------------------
+//----------------------- MANCITY BUY DEPOSITO--------------------------------
+spriteset(spriteset_MANCITY_buy, "gfx/invisible.png" ) {
+    [ 0,     0,       1,    1,     -1,      -1]
+}
+alternative_sprites(spriteset_MANCITY_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
+    [-23,  -7, "gfx/ManCity/ManCity_buy.png"]
+}
+
+//----------------------- MANCITY 8 bits (transparent)-------------------------
+spriteset(spriteset_MANCITY, "gfx/invisible.png") 
+//	left_x,   upper_y, width, height,  offset_x, offset_y
+{
+   	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+    	[ 0,      0,       1,     1,       -1,       -1]
+}
+alternative_sprites(spriteset_MANCITY, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
+	[-17,	-66,	"gfx/ManCity/ManCity1_z0.png"]	//35x132
+	[-124,	-38,  	"gfx/ManCity/ManCity2_z0.png"]	//153x116
+	[-90,	-31,  	"gfx/ManCity/ManCity3_z0.png"]	//181x63
+	[-99,	-72,  	"gfx/ManCity/ManCity4_z0.png"]	//153x117
+	[-17,	-66,  	"gfx/ManCity/ManCity5_z0.png"]	//35x133
+	[-58,	-80,  	"gfx/ManCity/ManCity6_z0.png"]	//153x16
+	[-91,	-31,  	"gfx/ManCity/ManCity7_z0.png"]	//182x63
+	[-26,	-44, 	"gfx/ManCity/ManCity8_z0.png"]	//153x116
+}
+spritegroup spritegroup_MANCITY {
+    loading: spriteset_MANCITY;
+    loaded: spriteset_MANCITY;
+}
+
+
+//----------------------- MANCITY  (ARTICULADO)  -----------------------------------------
+switch(FEAT_ROADVEHS, SELF, switch_MANCITY_articulated, extra_callback_info1) {
+	1: return dummy8;
+	2: return dummy8;
+    return CB_RESULT_NO_MORE_ARTICULATED_PARTS;
+}
+
+
+
+
+
+
+
+
+
+//switch (FEAT_TRAINS, SELF, cargo_amount_switch, cargo_count) {
+//  0: return 110;
+//  1..62: return 90;
+//}
+
+//switch (FEAT_TRAINS, SELF, cb_set_property, extra_callback_info1) {
+//  PROP_TRAINS_SPEED : cargo_amount_switch;
+//  return CB_FAILED;
+//}
+//switch (FEAT_TRAINS, SELF, cb_select_switch, current_callback) {
+//  VEH_CB_VEHICLE_PROPERTIES: cb_set_property;
+//  graphics_switch;
+//}
+
+
+
+item(FEAT_ROADVEHS, Fiat2B) {
+    property {
+
+	name:				string(STR_GRF_NAME_FIAT2B);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1915,01,01);
+        model_life:                     12;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  5;
+        cost_factor:                    100;	//70;
+        running_cost_factor:            55;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          30 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          18 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         2.0 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.27;
+	length:				6;
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+	sound_effect:                   SOUND_TRUCK_START;
+	default_cargo_type:		PASS;
+
+	//refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+
+	cargo_capacity:			10;
+
+	}
+    graphics {
+        default: 		 	spritegroup_Fiat2B;
+	//articulated_part:             	switch_cpUaoos_articulated;
+	purchase:                     	spriteset_Fiat2B_buy;
+	//speed:				cargo_amount_switch;
+    }
+}
+
+
+
+
+
+item(FEAT_ROADVEHS, Chevy) {
+    property {
+
+	name:				string(STR_GRF_NAME_CHEVY);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1930,01,01);
+        model_life:                     12;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  5;
+        cost_factor:                    115;	//70;
+        running_cost_factor:            74;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          40 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          26 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         3.6 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.2;
+	length:				8;
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+	sound_effect:                   SOUND_TRUCK_START;
+	default_cargo_type:		PASS;
+
+	//refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+
+	cargo_capacity:			18;
+
+	}
+    graphics {
+        default: 		 	spritegroup_Chevy;
+	//articulated_part:             	switch_cpUaoos_articulated;
+	purchase:                     	spriteset_Chevy_buy;
+	//speed:				cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+
+
+item(FEAT_ROADVEHS, Regent) {
+    property {
+
+	name:				string(STR_GRF_NAME_REGENT);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1940,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  5;
+        cost_factor:                    122;	//70;
+        running_cost_factor:            92;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          50 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          117 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         8.14 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.32;
+
+	length:				3;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY_WITH_HORN;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			58;
+	}
+
+    graphics {
+        default: 		 	spritegroup_Regent;
+	articulated_part:             	switch_Regent_articulated;
+	purchase:                     	spriteset_Regent_buy;
+	//speed:				cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+item(FEAT_ROADVEHS, Seddon) {
+    property {
+
+	name:				string(STR_GRF_NAME_SEDDON);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1950,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  4;
+        cost_factor:                    127;	//70;
+        running_cost_factor:            109;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          55 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          81 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         9.524 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.13;
+
+	length:				2;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_TRUCK_START;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			35;
+
+	}
+    graphics {
+        default: 		 	spritegroup_Seddon;
+	articulated_part:             	switch_Seddon_articulated;
+	purchase:                     	spriteset_Seddon_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+
+item(FEAT_ROADVEHS, Guy) {
+    property {
+
+	name:				string(STR_GRF_NAME_GUY);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1960,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  5;
+        cost_factor:                    133;	//70;
+        running_cost_factor:            125;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          60 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          150 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         9.4 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.09;
+
+	length:				5;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY_WITH_HORN;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			42;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_Guy;
+	articulated_part:             	switch_Guy_articulated;
+	purchase:                     	spriteset_Guy_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+item(FEAT_ROADVEHS, U2077) {
+    property {
+
+	name:				string(STR_GRF_NAME_U2077);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1970,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  5;
+        cost_factor:                    141;	//70;
+        running_cost_factor:            140;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          70 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          210 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         14 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.15;
+
+	length:				7;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			47;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_U2077;
+	articulated_part:             	switch_U2077_articulated;
+	purchase:                     	spriteset_U2077_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+
+
+item(FEAT_ROADVEHS, U2075) {
+    property {
+
+	name:				string(STR_GRF_NAME_U2075);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1975,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  6;
+        cost_factor:                    151;	//70;
+        running_cost_factor:            154;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          75 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          108 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         14.2 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.12;
+
+	length:				7;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY_WITH_HORN;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			36;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_U2075;
+	articulated_part:             	switch_U2075_articulated;
+	purchase:                     	spriteset_U2075_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+item(FEAT_ROADVEHS, Volvo) {
+    property {
+
+	name:				string(STR_GRF_NAME_VOLVO);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1980,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  6;
+        cost_factor:                    165;	//70;
+        running_cost_factor:            167;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          80 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          230 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         15.6 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.1;
+
+	length:				7;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			34;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_Volvo;
+	articulated_part:             	switch_Volvo_articulated;
+	purchase:                     	spriteset_Volvo_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+
+item(FEAT_ROADVEHS, MO405) {
+    property {
+
+	name:				string(STR_GRF_NAME_MO405);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(1990,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  6;
+        cost_factor:                    185;	//70;
+        running_cost_factor:            179;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          80 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          250 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         11.1 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.1;
+
+	length:				7;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			32;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_MO405;
+	articulated_part:             	switch_MO405_articulated;
+	purchase:                     	spriteset_MO405_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+item(FEAT_ROADVEHS, MO404) {
+    property {
+
+	name:				string(STR_GRF_NAME_MO404);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(2000,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  5;
+        cost_factor:                    215;	//70;
+        running_cost_factor:            190;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          100 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          381 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         13.4 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.08;
+
+	length:				8;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_BUS_START_PULL_AWAY;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			32;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_MO404;
+	articulated_part:             	switch_MO404_articulated;
+	purchase:                     	spriteset_MO404_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
+
+
+
+item(FEAT_ROADVEHS, MANCITY) {
+    property {
+
+	name:				string(STR_GRF_NAME_MANCITY);
+	climates_available:             bitmask(CLIMATE_TEMPERATE, CLIMATE_ARCTIC, CLIMATE_TROPICAL);
+        introduction_date:              date(2010,01,01);
+        model_life:                     15;
+        vehicle_life:                   30;
+
+        reliability_decay:              20;
+
+        loading_speed:                  7;
+        cost_factor:                    255;	//70;
+        running_cost_factor:            250;	//40;
+
+        sprite_id:			SPRITE_ID_NEW_ROADVEH;
+        speed:                          80 km/h;
+        misc_flags:                     bitmask(ROADVEH_FLAG_2CC);
+        refit_cost:                     0;
+        power:                          310 hp;
+        running_cost_base:              RUNNING_COST_ROADVEH;
+        weight:                         17.275 ton;
+
+	//engine_class:                   ENGINE_CLASS_ELECTRIC;
+	tractive_effort_coefficient:    0.3;
+	air_drag_coefficient:		0.2;
+
+	length:				1;
+
+	visual_effect:			visual_effect (VISUAL_EFFECT_DISABLE, 0);
+
+	sound_effect:                   SOUND_TRUCK_START_2;
+
+	default_cargo_type:		PASS;
+
+//	refittable_cargo_classes:       bitmask(CC_PASSENGERS);
+
+	//refittable_cargo_classes:       bitmask(CC_BULK);
+	//cargo_allow_refit:		no;	
+	//cargo_disallow_refit:		IORE, GRAI,
+	cargo_capacity:			84;
+
+
+	}
+
+    graphics {
+        default: 		 	spritegroup_MANCITY;
+	articulated_part:             	switch_MANCITY_articulated;
+	purchase:                     	spriteset_MANCITY_buy;
+	//speed:			cargo_amount_switch;
+    }
+}
+
+
+
