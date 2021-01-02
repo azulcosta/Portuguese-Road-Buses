@@ -1,3 +1,7 @@
+Version 1.1.0.0:
+	02-01-2021
+	- Added 2cc (Editable Company Colors)
+	- Update Released to the OpenTTD online content service BaNaNaS
 
 Version 1.0.0.0:
 	12-12-2020
