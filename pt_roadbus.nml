@@ -1,4 +1,4 @@
-﻿//define the grf
+//define the grf
 grf {
     grfid: "aC11";
     //grfid: "GF\01\03";
@@ -72,7 +72,7 @@ spriteset(spriteset_Fiat2B_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_Fiat2B_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-8,  -4, "gfx/Fiat2B/Fiat2B_buy.png"]
+    [-8,  -4, "gfx/Fiat2B/Fiat2B_buy.png", "gfx/Fiat2B/Fiat2B_buym.png"]
 }
 
 //----------------------- Fiat 2B BUS 8 bits (transparent)-------------------------
@@ -89,14 +89,14 @@ spriteset(spriteset_Fiat2B, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_Fiat2B, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-12,	-24,	"gfx/Fiat2B/Fiat2B1_z0.png"]	//23x36
-	[-25,	-7,  	"gfx/Fiat2B/Fiat2B2_z0.png"]	//55x37
-	[-19,	-10,  	"gfx/Fiat2B/Fiat2B3_z0.png"]	//59x30
-	[-8,	-10,  	"gfx/Fiat2B/Fiat2B4_z0.png"]	//54x46
-	[-12,	-19,  	"gfx/Fiat2B/Fiat2B5_z0.png"]	//23x46
-	[-50,	-12,  	"gfx/Fiat2B/Fiat2B6_z0.png"]	//54x46
-	[-38,	-15,  	"gfx/Fiat2B/Fiat2B7_z0.png"]	//58x30
-	[-18,	-13, 	"gfx/Fiat2B/Fiat2B8_z0.png"]	//52x37
+	[-12,	-24,	"gfx/Fiat2B/Fiat2B1_z0.png", "gfx/Fiat2B/Fiat2B1_z0m.png"]	//23x36
+	[-25,	-7,  	"gfx/Fiat2B/Fiat2B2_z0.png", "gfx/Fiat2B/Fiat2B2_z0m.png"]	//55x37
+	[-19,	-10,  	"gfx/Fiat2B/Fiat2B3_z0.png", "gfx/Fiat2B/Fiat2B3_z0m.png"]	//59x30
+	[-8,	-10,  	"gfx/Fiat2B/Fiat2B4_z0.png", "gfx/Fiat2B/Fiat2B4_z0m.png"]	//54x46
+	[-12,	-19,  	"gfx/Fiat2B/Fiat2B5_z0.png", "gfx/Fiat2B/Fiat2B5_z0m.png"]	//23x46
+	[-50,	-12,  	"gfx/Fiat2B/Fiat2B6_z0.png", "gfx/Fiat2B/Fiat2B6_z0m.png"]	//54x46
+	[-38,	-15,  	"gfx/Fiat2B/Fiat2B7_z0.png", "gfx/Fiat2B/Fiat2B7_z0m.png"]	//58x30
+	[-18,	-13, 	"gfx/Fiat2B/Fiat2B8_z0.png", "gfx/Fiat2B/Fiat2B8_z0m.png"]	//52x37
 }
 spritegroup spritegroup_Fiat2B {
     loading: spriteset_Fiat2B;
@@ -119,7 +119,7 @@ spriteset(spriteset_Chevy_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_Chevy_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-10,  -4, "gfx/Chevy/Chevy_buy.png"]
+    [-10,  -4, "gfx/Chevy/Chevy_buy.png", "gfx/Chevy/Chevy_buym.png"]
 }
 
 //----------------------- Chevy 8 bits (transparent)-------------------------
@@ -136,14 +136,14 @@ spriteset(spriteset_Chevy, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_Chevy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-13,	-25,	"gfx/Chevy/Chevy1_z0.png"]	//26x51
-	[-48,	-7,  	"gfx/Chevy/Chevy2_z0.png"]	//77x49
-	[-42,	-19,  	"gfx/Chevy/Chevy3_z0.png"]	//85x38
-	[-28,	-17,  	"gfx/Chevy/Chevy4_z0.png"]	//77x59
-	[-13,	-31,  	"gfx/Chevy/Chevy5_z0.png"]	//25x62
-	[-53,	-21,  	"gfx/Chevy/Chevy6_z0.png"]	//76x59
-	[-42,	-19,  	"gfx/Chevy/Chevy7_z0.png"]	//85x38
-	[-23,	-17, 	"gfx/Chevy/Chevy8_z0.png"]	//77x49
+	[-13,	-25,	"gfx/Chevy/Chevy1_z0.png", "gfx/Chevy/Chevy1_z0m.png"]	//26x51
+	[-48,	-7,  	"gfx/Chevy/Chevy2_z0.png", "gfx/Chevy/Chevy2_z0m.png"]	//77x49
+	[-42,	-19,  	"gfx/Chevy/Chevy3_z0.png", "gfx/Chevy/Chevy3_z0m.png"]	//85x38
+	[-28,	-17,  	"gfx/Chevy/Chevy4_z0.png", "gfx/Chevy/Chevy4_z0m.png"]	//77x59
+	[-13,	-31,  	"gfx/Chevy/Chevy5_z0.png", "gfx/Chevy/Chevy5_z0m.png"]	//25x62
+	[-53,	-21,  	"gfx/Chevy/Chevy6_z0.png", "gfx/Chevy/Chevy6_z0m.png"]	//76x59
+	[-42,	-19,  	"gfx/Chevy/Chevy7_z0.png", "gfx/Chevy/Chevy7_z0m.png"]	//85x38
+	[-23,	-17, 	"gfx/Chevy/Chevy8_z0.png", "gfx/Chevy/Chevy8_z0m.png"]	//77x49
 }
 spritegroup spritegroup_Chevy {
     loading: spriteset_Chevy;
@@ -163,7 +163,7 @@ spriteset(spriteset_Regent_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_Regent_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-14,  -7, "gfx/Regent/Regent_buy.png"]
+    [-14,  -7, "gfx/Regent/Regent_buy.png", "gfx/Regent/Regent_buym.png"]
 }
 
 //----------------------- Regent 8 bits (transparent)-------------------------
@@ -180,14 +180,14 @@ spriteset(spriteset_Regent, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_Regent, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-17,	-45,	"gfx/Regent/Regent1_z0.png"]	//35x91
-	[-74,	-33,  	"gfx/Regent/Regent2_z0.png"]	//99x86
-	[-63,	-30,  	"gfx/Regent/Regent3_z0.png"]	//111x61
-	[-49,	-50,  	"gfx/Regent/Regent4_z0.png"]	//99x89
-	[-17,	-51,  	"gfx/Regent/Regent5_z0.png"]	//34x93
-	[-54,	-55,  	"gfx/Regent/Regent6_z0.png"]	//99x89
-	[-55,	-30,  	"gfx/Regent/Regent7_z0.png"]	//110x61
-	[-24,	-46, 	"gfx/Regent/Regent8_z0.png"]	//99x87
+	[-17,	-45,	"gfx/Regent/Regent1_z0.png", "gfx/Regent/Regent1_z0m.png"]	//35x91
+	[-74,	-33,  	"gfx/Regent/Regent2_z0.png", "gfx/Regent/Regent2_z0m.png"]	//99x86
+	[-63,	-30,  	"gfx/Regent/Regent3_z0.png", "gfx/Regent/Regent3_z0m.png"]	//111x61
+	[-49,	-50,  	"gfx/Regent/Regent4_z0.png", "gfx/Regent/Regent4_z0m.png"]	//99x89
+	[-17,	-51,  	"gfx/Regent/Regent5_z0.png", "gfx/Regent/Regent5_z0m.png"]	//34x93
+	[-54,	-55,  	"gfx/Regent/Regent6_z0.png", "gfx/Regent/Regent6_z0m.png"]	//99x89
+	[-55,	-30,  	"gfx/Regent/Regent7_z0.png", "gfx/Regent/Regent7_z0m.png"]	//110x61
+	[-24,	-46, 	"gfx/Regent/Regent8_z0.png", "gfx/Regent/Regent8_z0m.png"]	//99x87
 }
 spritegroup spritegroup_Regent {
     loading: spriteset_Regent;
@@ -212,7 +212,7 @@ spriteset(spriteset_Seddon_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_Seddon_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-13,  -4, "gfx/Seddon/Seddon_buy.png"]
+    [-13,  -4, "gfx/Seddon/Seddon_buy.png", "gfx/Seddon/Seddon_buym.png"]
 }
 
 //----------------------- Seddon 8 bits (transparent)-------------------------
@@ -229,14 +229,14 @@ spriteset(spriteset_Seddon, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_Seddon, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-15,	-44,	"gfx/Seddon/Seddon1_z0.png"]	//31x79
-	[-68,	-21,  	"gfx/Seddon/Seddon2_z0.png"]	//96x72
-	[-47,	-21,  	"gfx/Seddon/Seddon3_z0.png"]	//105x43
-	[-48,	-31,  	"gfx/Seddon/Seddon4_z0.png"]	//96x73
-	[-17,	-33,  	"gfx/Seddon/Seddon5_z0.png"]	//31x77
-	[-53,	-36,  	"gfx/Seddon/Seddon6_z0.png"]	//96x73
-	[-57,	-21,  	"gfx/Seddon/Seddon7_z0.png"]	//105x43
-	[-23,	-31, 	"gfx/Seddon/Seddon8_z0.png"]	//96x72
+	[-15,	-44,	"gfx/Seddon/Seddon1_z0.png", "gfx/Seddon/Seddon1_z0m.png"]	//31x79
+	[-68,	-21,  	"gfx/Seddon/Seddon2_z0.png", "gfx/Seddon/Seddon2_z0m.png"]	//96x72
+	[-47,	-21,  	"gfx/Seddon/Seddon3_z0.png", "gfx/Seddon/Seddon3_z0m.png"]	//105x43
+	[-48,	-31,  	"gfx/Seddon/Seddon4_z0.png", "gfx/Seddon/Seddon4_z0m.png"]	//96x73
+	[-17,	-33,  	"gfx/Seddon/Seddon5_z0.png", "gfx/Seddon/Seddon5_z0m.png"]	//31x77
+	[-53,	-36,  	"gfx/Seddon/Seddon6_z0.png", "gfx/Seddon/Seddon6_z0m.png"]	//96x73
+	[-57,	-21,  	"gfx/Seddon/Seddon7_z0.png", "gfx/Seddon/Seddon7_z0m.png"]	//105x43
+	[-23,	-31, 	"gfx/Seddon/Seddon8_z0.png", "gfx/Seddon/Seddon8_z0m.png"]	//96x72
 }
 spritegroup spritegroup_Seddon {
     loading: spriteset_Seddon;
@@ -258,7 +258,7 @@ spriteset(spriteset_Guy_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_Guy_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-19,  -5, "gfx/Guy/Guy_buy.png"]
+    [-19,  -5, "gfx/Guy/Guy_buy.png", "gfx/Guy/Guy_buym.png"]
 }
 
 //----------------------- Guy 8 bits (transparent)-------------------------
@@ -275,14 +275,14 @@ spriteset(spriteset_Guy, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_Guy, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-16,	-47,	"gfx/Guy/Guy1_z0.png"]	//31x94
-	[-90,	-20,  	"gfx/Guy/Guy2_z0.png"]	//119x82
-	[-70,	-23,  	"gfx/Guy/Guy3_z0.png"]	//140x46
-	[-70,	-41,  	"gfx/Guy/Guy4_z0.png"]	//119x83
-	[-16,	-46,  	"gfx/Guy/Guy5_z0.png"]	//31x93
-	[-55,	-48,  	"gfx/Guy/Guy6_z0.png"]	//119x83
-	[-70,	-23,  	"gfx/Guy/Guy7_z0.png"]	//139x46
-	[-25,	-30, 	"gfx/Guy/Guy8_z0.png"]	//119x82
+	[-16,	-47,	"gfx/Guy/Guy1_z0.png", "gfx/Guy/Guy1_z0m.png"]	//31x94
+	[-90,	-20,  	"gfx/Guy/Guy2_z0.png", "gfx/Guy/Guy2_z0m.png"]	//119x82
+	[-70,	-23,  	"gfx/Guy/Guy3_z0.png", "gfx/Guy/Guy3_z0m.png"]	//140x46
+	[-70,	-41,  	"gfx/Guy/Guy4_z0.png", "gfx/Guy/Guy4_z0m.png"]	//119x83
+	[-16,	-46,  	"gfx/Guy/Guy5_z0.png", "gfx/Guy/Guy5_z0m.png"]	//31x93
+	[-55,	-48,  	"gfx/Guy/Guy6_z0.png", "gfx/Guy/Guy6_z0m.png"]	//119x83
+	[-70,	-23,  	"gfx/Guy/Guy7_z0.png", "gfx/Guy/Guy7_z0m.png"]	//139x46
+	[-25,	-30, 	"gfx/Guy/Guy8_z0.png", "gfx/Guy/Guy8_z0m.png"]	//119x82
 }
 spritegroup spritegroup_Guy {
     loading: spriteset_Guy;
@@ -307,7 +307,7 @@ spriteset(spriteset_U2077_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_U2077_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-20,  -4, "gfx/U2077/U2077_buy.png"]
+    [-20,  -4, "gfx/U2077/U2077_buy.png", "gfx/U2077/U2077_buym.png"]
 }
 
 //----------------------- U2077 8 bits (transparent)-------------------------
@@ -324,14 +324,14 @@ spriteset(spriteset_U2077, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_U2077, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-15,	-43,	"gfx/U2077/U20771_z0.png"]	//29x106
-	[-103,	-24,  	"gfx/U2077/U20772_z0.png"]	//133x93
-	[-105,	-24,  	"gfx/U2077/U20773_z0.png"]	//159x48
-	[-84,	-52,  	"gfx/U2077/U20774_z0.png"]	//133x95
-	[-15,	-74,  	"gfx/U2077/U20775_z0.png"]	//29x108
-	[-56,	-61,  	"gfx/U2077/U20776_z0.png"]	//133x95
-	[-60,	-24,  	"gfx/U2077/U20777_z0.png"]	//159x48
-	[-21,	-31, 	"gfx/U2077/U20778_z0.png"]	//133x93
+	[-15,	-43,	"gfx/U2077/U20771_z0.png", "gfx/U2077/U20771_z0m.png"]	//29x106
+	[-103,	-24,  	"gfx/U2077/U20772_z0.png", "gfx/U2077/U20772_z0m.png"]	//133x93
+	[-105,	-24,  	"gfx/U2077/U20773_z0.png", "gfx/U2077/U20773_z0m.png"]	//159x48
+	[-84,	-52,  	"gfx/U2077/U20774_z0.png", "gfx/U2077/U20774_z0m.png"]	//133x95
+	[-15,	-74,  	"gfx/U2077/U20775_z0.png", "gfx/U2077/U20775_z0m.png"]	//29x108
+	[-56,	-61,  	"gfx/U2077/U20776_z0.png", "gfx/U2077/U20776_z0m.png"]	//133x95
+	[-60,	-24,  	"gfx/U2077/U20777_z0.png", "gfx/U2077/U20777_z0m.png"]	//159x48
+	[-21,	-31, 	"gfx/U2077/U20778_z0.png", "gfx/U2077/U20778_z0m.png"]	//133x93
 }
 spritegroup spritegroup_U2077 {
     loading: spriteset_U2077;
@@ -358,7 +358,7 @@ spriteset(spriteset_U2075_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_U2075_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-20,  -4, "gfx/U2075/U2075_buy.png"]
+    [-20,  -4, "gfx/U2075/U2075_buy.png", "gfx/U2075/U2075_buym.png"]
 }
 
 //----------------------- U2075 8 bits (transparent)-------------------------
@@ -375,14 +375,14 @@ spriteset(spriteset_U2075, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_U2075, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-15,	-43,	"gfx/U2075/U20751_z0.png"]	//29x107
-	[-103,	-24,  	"gfx/U2075/U20752_z0.png"]	//133x95
-	[-105,	-24,  	"gfx/U2075/U20753_z0.png"]	//159x48
-	[-84,	-52,  	"gfx/U2075/U20754_z0.png"]	//133x96
-	[-15,	-74,  	"gfx/U2075/U20755_z0.png"]	//29x108
-	[-56,	-61,  	"gfx/U2075/U20756_z0.png"]	//133x96
-	[-60,	-24,  	"gfx/U2075/U20757_z0.png"]	//159x48
-	[-21,	-31, 	"gfx/U2075/U20758_z0.png"]	//133x95
+	[-15,	-43,	"gfx/U2075/U20751_z0.png", "gfx/U2075/U20751_z0m.png"]	//29x107
+	[-103,	-24,  	"gfx/U2075/U20752_z0.png", "gfx/U2075/U20752_z0m.png"]	//133x95
+	[-105,	-24,  	"gfx/U2075/U20753_z0.png", "gfx/U2075/U20753_z0m.png"]	//159x48
+	[-84,	-52,  	"gfx/U2075/U20754_z0.png", "gfx/U2075/U20754_z0m.png"]	//133x96
+	[-15,	-74,  	"gfx/U2075/U20755_z0.png", "gfx/U2075/U20755_z0m.png"]	//29x108
+	[-56,	-61,  	"gfx/U2075/U20756_z0.png", "gfx/U2075/U20756_z0m.png"]	//133x96
+	[-60,	-24,  	"gfx/U2075/U20757_z0.png", "gfx/U2075/U20757_z0m.png"]	//159x48
+	[-21,	-31, 	"gfx/U2075/U20758_z0.png", "gfx/U2075/U20758_z0m.png"]	//133x95
 }
 spritegroup spritegroup_U2075 {
     loading: spriteset_U2075;
@@ -406,7 +406,7 @@ spriteset(spriteset_Volvo_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_Volvo_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-19,  -4, "gfx/Volvo/Volvo_buy.png"]
+    [-19,  -4, "gfx/Volvo/Volvo_buy.png", "gfx/Volvo/Volvo_buym.png"]
 }
 
 //----------------------- Volvo 8 bits (transparent)-------------------------
@@ -423,14 +423,14 @@ spriteset(spriteset_Volvo, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_Volvo, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-16,	-43,	"gfx/Volvo/Volvo1_z0.png"]	//33x102
-	[-103,	-24,  	"gfx/Volvo/Volvo2_z0.png"]	//133x91
-	[-105,	-24,  	"gfx/Volvo/Volvo3_z0.png"]	//155x48
-	[-84,	-52,  	"gfx/Volvo/Volvo4_z0.png"]	//133x93
-	[-16,	-74,  	"gfx/Volvo/Volvo5_z0.png"]	//33x104
-	[-56,	-61,  	"gfx/Volvo/Volvo6_z0.png"]	//133x93
-	[-60,	-24,  	"gfx/Volvo/Volvo7_z0.png"]	//154x49
-	[-21,	-31, 	"gfx/Volvo/Volvo8_z0.png"]	//133x91
+	[-16,	-43,	"gfx/Volvo/Volvo1_z0.png", "gfx/Volvo/Volvo1_z0m.png"]	//33x102
+	[-103,	-24,  	"gfx/Volvo/Volvo2_z0.png", "gfx/Volvo/Volvo2_z0m.png"]	//133x91
+	[-105,	-24,  	"gfx/Volvo/Volvo3_z0.png", "gfx/Volvo/Volvo3_z0m.png"]	//155x48
+	[-84,	-52,  	"gfx/Volvo/Volvo4_z0.png", "gfx/Volvo/Volvo4_z0m.png"]	//133x93
+	[-16,	-74,  	"gfx/Volvo/Volvo5_z0.png", "gfx/Volvo/Volvo5_z0m.png"]	//33x104
+	[-56,	-61,  	"gfx/Volvo/Volvo6_z0.png", "gfx/Volvo/Volvo6_z0m.png"]	//133x93
+	[-60,	-24,  	"gfx/Volvo/Volvo7_z0.png", "gfx/Volvo/Volvo7_z0m.png"]	//154x49
+	[-21,	-31, 	"gfx/Volvo/Volvo8_z0.png", "gfx/Volvo/Volvo8_z0m.png"]	//133x91
 }
 spritegroup spritegroup_Volvo {
     loading: spriteset_Volvo;
@@ -457,7 +457,7 @@ spriteset(spriteset_MO405_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_MO405_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-18,  -5, "gfx/MO405/MO405_buy.png"]
+    [-18,  -5, "gfx/MO405/MO405_buy.png", "gfx/MO405/MO405_buym.png"]
 }
 
 //----------------------- MO405 8 bits (transparent)-------------------------
@@ -474,14 +474,14 @@ spriteset(spriteset_MO405, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_MO405, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-16,	-52,	"gfx/MO405/MO4051_z0.png"]	//33x104
-	[-103,	-24,  	"gfx/MO405/MO4052_z0.png"]	//131x94
-	[-76,	-25,  	"gfx/MO405/MO4053_z0.png"]	//152x51
-	[-84,	-52,  	"gfx/MO405/MO4054_z0.png"]	//131x94
-	[-16,	-52,  	"gfx/MO405/MO4055_z0.png"]	//33x104
-	[-56,	-61,  	"gfx/MO405/MO4056_z0.png"]	//131x94
-	[-76,	-25,  	"gfx/MO405/MO4057_z0.png"]	//152x51
-	[-21,	-31, 	"gfx/MO405/MO4058_z0.png"]	//131x94
+	[-16,	-52,	"gfx/MO405/MO4051_z0.png", "gfx/MO405/MO4051_z0m.png"]	//33x104
+	[-103,	-24,  	"gfx/MO405/MO4052_z0.png", "gfx/MO405/MO4052_z0m.png"]	//131x94
+	[-76,	-25,  	"gfx/MO405/MO4053_z0.png", "gfx/MO405/MO4053_z0m.png"]	//152x51
+	[-84,	-52,  	"gfx/MO405/MO4054_z0.png", "gfx/MO405/MO4054_z0m.png"]	//131x94
+	[-16,	-52,  	"gfx/MO405/MO4055_z0.png", "gfx/MO405/MO4055_z0m.png"]	//33x104
+	[-56,	-61,  	"gfx/MO405/MO4056_z0.png", "gfx/MO405/MO4056_z0m.png"]	//131x94
+	[-76,	-25,  	"gfx/MO405/MO4057_z0.png", "gfx/MO405/MO4057_z0m.png"]	//152x51
+	[-21,	-31, 	"gfx/MO405/MO4058_z0.png", "gfx/MO405/MO4058_z0m.png"]	//131x94
 }
 spritegroup spritegroup_MO405 {
     loading: spriteset_MO405;
@@ -507,7 +507,7 @@ spriteset(spriteset_MO404_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_MO404_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-20,  -6, "gfx/MO404/MO404_buy.png"]
+    [-20,  -6, "gfx/MO404/MO404_buy.png", "gfx/MO404/MO404_buym.png"]
 }
 
 //----------------------- MO404 8 bits (transparent)-------------------------
@@ -524,14 +524,14 @@ spriteset(spriteset_MO404, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_MO404, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-18,	-56,	"gfx/MO404/MO4041_z0.png"]	//37x113
-	[-113,	-30,  	"gfx/MO404/MO4042_z0.png"]	//140x100
-	[-82,	-30,  	"gfx/MO404/MO4043_z0.png"]	//165x60
-	[-90,	-66,  	"gfx/MO404/MO4044_z0.png"]	//139x107
-	[-19,	-60,  	"gfx/MO404/MO4045_z0.png"]	//38x120
-	[-56,	-73,  	"gfx/MO404/MO4046_z0.png"]	//140x107
-	[-82,	-30,  	"gfx/MO404/MO4047_z0.png"]	//165x59
-	[-23,	-37, 	"gfx/MO404/MO4048_z0.png"]	//139x100
+	[-18,	-56,	"gfx/MO404/MO4041_z0.png", "gfx/MO404/MO4041_z0m.png"]	//37x113
+	[-113,	-30,  	"gfx/MO404/MO4042_z0.png", "gfx/MO404/MO4042_z0m.png"]	//140x100
+	[-82,	-30,  	"gfx/MO404/MO4043_z0.png", "gfx/MO404/MO4043_z0m.png"]	//165x60
+	[-90,	-66,  	"gfx/MO404/MO4044_z0.png", "gfx/MO404/MO4044_z0m.png"]	//139x107
+	[-19,	-60,  	"gfx/MO404/MO4045_z0.png", "gfx/MO404/MO4045_z0m.png"]	//38x120
+	[-56,	-73,  	"gfx/MO404/MO4046_z0.png", "gfx/MO404/MO4046_z0m.png"]	//140x107
+	[-82,	-30,  	"gfx/MO404/MO4047_z0.png", "gfx/MO404/MO4047_z0m.png"]	//165x59
+	[-23,	-37, 	"gfx/MO404/MO4048_z0.png", "gfx/MO404/MO4048_z0m.png"]	//139x100
 }
 spritegroup spritegroup_MO404 {
     loading: spriteset_MO404;
@@ -558,7 +558,7 @@ spriteset(spriteset_MANCITY_buy, "gfx/invisible.png" ) {
     [ 0,     0,       1,    1,     -1,      -1]
 }
 alternative_sprites(spriteset_MANCITY_buy, ZOOM_LEVEL_NORMAL, BIT_DEPTH_32BPP) {
-    [-23,  -7, "gfx/ManCity/ManCity_buy.png"]
+    [-23,  -7, "gfx/ManCity/ManCity_buy.png", "gfx/ManCity/ManCity_buym.png"]
 }
 
 //----------------------- MANCITY 8 bits (transparent)-------------------------
@@ -575,14 +575,14 @@ spriteset(spriteset_MANCITY, "gfx/invisible.png")
     	[ 0,      0,       1,     1,       -1,       -1]
 }
 alternative_sprites(spriteset_MANCITY, ZOOM_LEVEL_IN_4X, BIT_DEPTH_32BPP) {
-	[-17,	-66,	"gfx/ManCity/ManCity1_z0.png"]	//35x132
-	[-124,	-38,  	"gfx/ManCity/ManCity2_z0.png"]	//153x116
-	[-90,	-31,  	"gfx/ManCity/ManCity3_z0.png"]	//181x63
-	[-99,	-72,  	"gfx/ManCity/ManCity4_z0.png"]	//153x117
-	[-17,	-66,  	"gfx/ManCity/ManCity5_z0.png"]	//35x133
-	[-58,	-80,  	"gfx/ManCity/ManCity6_z0.png"]	//153x16
-	[-91,	-31,  	"gfx/ManCity/ManCity7_z0.png"]	//182x63
-	[-26,	-44, 	"gfx/ManCity/ManCity8_z0.png"]	//153x116
+	[-17,	-66,	"gfx/ManCity/ManCity1_z0.png", "gfx/ManCity/ManCity1_z0m.png"]	//35x132
+	[-124,	-38,  	"gfx/ManCity/ManCity2_z0.png", "gfx/ManCity/ManCity2_z0m.png"]	//153x116
+	[-90,	-31,  	"gfx/ManCity/ManCity3_z0.png", "gfx/ManCity/ManCity3_z0m.png"]	//181x63
+	[-99,	-72,  	"gfx/ManCity/ManCity4_z0.png", "gfx/ManCity/ManCity4_z0m.png"]	//153x117
+	[-17,	-66,  	"gfx/ManCity/ManCity5_z0.png", "gfx/ManCity/ManCity5_z0m.png"]	//35x133
+	[-58,	-80,  	"gfx/ManCity/ManCity6_z0.png", "gfx/ManCity/ManCity6_z0m.png"]	//153x16
+	[-91,	-31,  	"gfx/ManCity/ManCity7_z0.png", "gfx/ManCity/ManCity7_z0m.png"]	//182x63
+	[-26,	-44, 	"gfx/ManCity/ManCity8_z0.png", "gfx/ManCity/ManCity8_z0m.png"]	//153x116
 }
 spritegroup spritegroup_MANCITY {
     loading: spriteset_MANCITY;
