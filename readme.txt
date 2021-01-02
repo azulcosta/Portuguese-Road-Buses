@@ -43,6 +43,7 @@ A NewGRF for OpenTTD that includes 11 generic and well-known Buses for each era,
 2 General information
 ---------------------
 Graphics:  32bpp + Extrazoom (4x)  
+V 1.1 = Added 2cc Company Colors (02/01/2021)
 Special Thanks to CP Virtual Team.  
 Presentation video: https://www.youtube.com/watch?v=tEhzN8cw2OM
 
@@ -66,8 +67,6 @@ Not real issues, but it's important to know this:
 - Only the first 2 buses can pass over other vehicles (of the same size or shorter in lenght).
 - In the same way that only the first 2 buses are the ones that can get in and out of bus terminals, making inversion sharp curves in one square of terrain map.
 - The last 9 vehicles, can only perform service at street/road stops. (Drive-Trough)
-
-- No costum company colors yet... maybe for a future version...
 - The default (Vanilla) Bus vehicles are disabled with this pack active. (Not a replacement, but it works as if it was...).
 
 For future issues, please report on my github repository.
